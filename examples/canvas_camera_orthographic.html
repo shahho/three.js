@@ -70,6 +70,8 @@
 					cube.position.x = Math.floor( ( Math.random() * 1000 - 500 ) / 50 ) * 50 + 25;
 					cube.position.y = ( cube.scale.y * 50 ) / 2;
 					cube.position.z = Math.floor( ( Math.random() * 1000 - 500 ) / 50 ) * 50 + 25;
+					cube.castShadow = true;
+					cube.receiveShadow = true;
 
 					scene.add( cube );
 
@@ -85,6 +87,7 @@
 				directionalLight.position.y = Math.random() - 0.5;
 				directionalLight.position.z = Math.random() - 0.5;
 				directionalLight.position.normalize();
+				directionalLight.castShadow = true;
 				scene.add( directionalLight );
 
 				var directionalLight = new THREE.DirectionalLight( Math.random() * 0xffffff );
@@ -92,6 +95,7 @@
 				directionalLight.position.y = Math.random() - 0.5;
 				directionalLight.position.z = Math.random() - 0.5;
 				directionalLight.position.normalize();
+				directionalLight.castShadow = true;
 				scene.add( directionalLight );
 
 				renderer = new THREE.CanvasRenderer();
